@@ -1,8 +1,8 @@
-#Centos yum搭建PPTP VPN
-###1.安装
+# Centos yum搭建PPTP VPN
+### 1.安装
 `yum install -y pptpd iptables`
 
-###2.配置
+### 2.配置
 配置/etc/ppp/options.pptpd文件，找到网络和路由设置，我们设置ms-dns为8.8.8.8和8.8.4.4，编辑/etc/ppp/chap-secrets，按照格式来创建用户，设置密码。
 
 ```

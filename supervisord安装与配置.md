@@ -1,13 +1,13 @@
-##Supervisord 安装与配置
+## Supervisord 安装与配置
 
-###安装
+### 安装
 其实官网上提供了完整的，多样的安装方式  
 我这里选择pip安装  
 `pip install supervisor`  
 系统中如果没有pip命令的话，用yum安装pip  
 `yum install python-pip`  
 
-###配置
+### 配置
 centos7通过pip安装完后，默认配置会生成在`/etc/supervisord.conf`  
 打开编辑该文件，在结尾处添加需要的配置和需要监护的进程或脚本  
 贴个监护shadowsocks的配置
@@ -28,7 +28,7 @@ supervisord是否以daemon方式运行，是在supervisord.conf的supervisord项
 
 它监控的进程是否随着supervisord被杀而退出，跟supervisord是否以daemon方式运行没有关系。当你使用kill -9关闭supervisord时，supervisord就会来不及告诉它监控的进程，它已经关闭了，它监控的进程就变成没人管理的进程。当使用kill -15杀死supervisord时，supervisord有足够的时间来处理它监控的进程，它监控的进程会跟着supervisord一起关闭。
 
-###运行和管理
+### 运行和管理
 
 supervisord (以daemon方式启动)  
 或  
